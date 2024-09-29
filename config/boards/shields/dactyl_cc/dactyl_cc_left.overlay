@@ -4,11 +4,19 @@
 
 &kscan0 {
     col-gpios
-        = <&gpio0 22 GPIO_ACTIVE_HIGH> // col5 in the schematic
-        , <&gpio0 24 GPIO_ACTIVE_HIGH> // col4 in the schematic
-        , <&gpio1 0  GPIO_ACTIVE_HIGH> // col3 in the schematic
-        , <&gpio0 11 GPIO_ACTIVE_HIGH> // col2 in the schematic
-        , <&gpio1 4  GPIO_ACTIVE_HIGH> // col1 in the schematic
-        , <&gpio1 6  GPIO_ACTIVE_HIGH> // col0 in the schematic
-        ;
+            = <&gpio0 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0 from the schematic file
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1 from the schematic file
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2 from the schematic file
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3 from the schematic file
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 4 from the schematic file
+            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 5 from the schematic file
+            ;
+
+//        = <&gpio0 22 GPIO_ACTIVE_HIGH> // col5 in the schematic
+//        , <&gpio0 24 GPIO_ACTIVE_HIGH> // col4 in the schematic
+//        , <&gpio1 0  GPIO_ACTIVE_HIGH> // col3 in the schematic
+//        , <&gpio0 11 GPIO_ACTIVE_HIGH> // col2 in the schematic
+//        , <&gpio1 4  GPIO_ACTIVE_HIGH> // col1 in the schematic
+//        , <&gpio1 6  GPIO_ACTIVE_HIGH> // col0 in the schematic
+//        ;
 };
